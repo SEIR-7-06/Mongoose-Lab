@@ -47,7 +47,7 @@ Create a simple terminal app that does the following.  There is no express, so t
 1. Delete Apple
 1. Delete Google
 
-Write the previous exercise so that creating/updating/finding/deleting apple happened "at the same time" as creating/updating/finding/deleting google.  Take advantage of node's asynchronous nature!
+If you included console.logs, you may have noticed that things aren't happening in the same order that you thought they would.  This is because database access is an asynchronous operation.  Where do you put code that you want to execute _after_ you've done your database read/write?  Write the previous exercise so that creating/updating/finding/deleting apple happens "at the same time" as creating/updating/finding/deleting google.  If you want one database operation to happen after another one, you'll have to start it inside the callback that happens after the first one is done. This is because of Node's asynchronous nature!
 
 ## Hungry for More?
 
